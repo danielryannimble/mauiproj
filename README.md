@@ -1,2 +1,2 @@
-# mauiproject
-this is a test project for maui learning based 
+# mauiproj
+this is a test project for maui based learning 

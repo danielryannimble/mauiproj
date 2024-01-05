@@ -15,7 +15,7 @@ public class DemoNavigationService : INavigationService
         NavigateToAsync(
             string.IsNullOrEmpty(_settingsService.AuthAccessToken)
             ? "//Page2"
-            : "//Page2"
+            : "//CatalogView"
         );
     
         

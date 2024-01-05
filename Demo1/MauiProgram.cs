@@ -1,8 +1,9 @@
-﻿using Demo1.Services;
+﻿
 using Microsoft.Extensions.Logging;
 
 using Demo1.Services.Settings;
 using Demo1.Services.Navigation;
+using Demo1.ViewModels;
 
 namespace Demo1;
 
@@ -19,6 +20,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			})
 			.RegisterAppServices()
+			.RegisterViewModels()
 			.RegisterViews();
 
 #if DEBUG
@@ -40,8 +42,18 @@ public static class MauiProgram
 	{
 		Console.WriteLine("RegisterViews");
 		mauiAppBuilder.Services.AddTransient<MainPage>();
+		mauiAppBuilder.Services.AddTransient<CatalogView>();
 		return mauiAppBuilder;
 	}
+
+	public static MauiAppBuilder RegisterViewModels(this MauiAppBuilder mauiAppBuilder)
+	{
+		Console.WriteLine("RegisterViewModels");
+		mauiAppBuilder.Services.AddSingleton<CatalogViewModel>();
+		return mauiAppBuilder;
+	}
+
+
 
 }
 

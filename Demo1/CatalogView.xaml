@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Demo1.ViewModels"
+             x:DataType="viewmodels:CatalogViewModel"
+             x:Class="Demo1.CatalogView">
+
+                <VerticalStackLayout>
+             <Label Text="CatalogView" TextColor="#77d065" />
+             </VerticalStackLayout>
+
+
+             <Grid ColumnSpacing="10" RowSpacing="10">
+               <Label
+                  IsVisible="{Binding Products.Count}"
+                  Text="NO PRODUCTS FOUND"
+                  HorizontalOptions="Center"
+                  VerticalOptions="Center"
+               />
+             </Grid>
+
+             </ContentPage>

@@ -5,14 +5,10 @@
              x:DataType="viewmodels:CatalogViewModel"
              x:Class="Demo1.CatalogView">
 
-                <VerticalStackLayout>
-             <Label Text="CatalogView" TextColor="#77d065" />
-             </VerticalStackLayout>
-
 
              <Grid ColumnSpacing="10" RowSpacing="10">
                <Label
-                  IsVisible="{Binding Products.Count}"
+                  IsVisible="{Binding Products.Count, Converter={StaticResource DoesNotHaveCountConverter}}"
                   Text="NO PRODUCTS FOUND"
                   HorizontalOptions="Center"
                   VerticalOptions="Center"

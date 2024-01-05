@@ -4,6 +4,7 @@ using Microsoft.Extensions.Logging;
 using Demo1.Services.Settings;
 using Demo1.Services.Navigation;
 using Demo1.ViewModels;
+using CommunityToolkit.Maui;
 
 namespace Demo1;
 
@@ -14,6 +15,7 @@ public static class MauiProgram
 		var builder = MauiApp.CreateBuilder();
 		builder
 			.UseMauiApp<App>()
+			.UseMauiCommunityToolkit()
 			.ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
